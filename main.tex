@@ -1,8 +1,13 @@
-\documentclass{book}
+\documentclass[oneside]{book}
 \usepackage{subfiles}
 \ProvidesPackage{mystyle}
 \usepackage{mystyle}
+
 \begin{document}
+\includepdf[pages={1}]{title_page.pdf}
+\tableofcontents
+\clearpage
+\setcounter{page}{1}
 \subfile{./tex/kapitel1_artikel.tex}
 \pagebreak
 \subfile{./tex/kapitel2_substantiv.tex}
@@ -15,6 +20,9 @@
 \pagebreak
 \subfile{./tex/kapitel7_die_zahlen.tex}
 \pagebreak
+\begin{appendices}
+\subfile{./tex/starke_verben.tex}
+\pagebreak
 \subfile{./tex/sprechubung.tex}
 \pagebreak
 \subfile{./tex/als_er_gebellt_wordt_blaffen_de_honden.tex}
@@ -22,6 +30,7 @@
 \subfile{./tex/vok.tex}
 \pagebreak
 \subfile{./tex/ubersetzungsubungen.tex}
+\end{appendices}
 \pagebreak
 \printbibliography
 \end{document}
